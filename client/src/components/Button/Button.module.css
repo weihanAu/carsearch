@@ -1,0 +1,14 @@
+.main{
+  min-width: 11.875rem;
+  border: none;
+  padding: 0.5rem;
+  border-radius: 1rem;
+}
+
+.main:hover{
+  cursor: pointer;
+}
+.black {
+  background-color: var(--color-dark-bg);
+  color: var(--color-core-bg);
+}

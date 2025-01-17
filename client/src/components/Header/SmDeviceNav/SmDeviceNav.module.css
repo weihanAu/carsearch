@@ -48,7 +48,6 @@
 }
 
 .xmenu {
-  background-color: white;
   position: fixed;
   top: 7rem;
   right: 0;
@@ -56,6 +55,13 @@
   height:calc( 100% - 7rem);
   padding: 60px 20px;
   box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-bottom: 1px solid;
+  /* Start animation */
+    animation: fadeInSlide 1s ease-in-out
 }
 
 .xmenu ul {
@@ -95,11 +101,37 @@
   top: -8px;
 }
 
+.xmenu .siteHeaderLink{
+  display: flex;
+  width: 100%;
+  padding: 1.5rem;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-emphasis-gray);
+}
 
 @media (max-width: 576px){
   .siteHeaderRightArea {
     display: flex;
     align-items: center;
     margin: 12px 0 0;
+  }
+}
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateY(50px);
+    /* Start off-screen */
+  }
+
+  100% {
+    opacity: 1;
+    /* Fade in */
+    transform: translateY(0);
+    /* Slide into position */
   }
 }

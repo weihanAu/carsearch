@@ -9,18 +9,14 @@ const SmDeviceNav =()=>{
   return(
     <div className={styles.siteHeaderRightArea} onClick={()=>setOpen(!open)}>
       <button className={styles.siteHeaderMobileToggle}>
-        <div className={styles.burgerMenu} onclick="toggleMenu()">
+        <div className={`${styles.burgerMenu} ${open && styles.open}`}>
           <div className={styles.burgerLine}></div>
           <div className={styles.burgerLine}></div>
           <div className={styles.burgerLine}></div>
         </div>
-      {open && <div className={styles.xmenu}>
-          <ul>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
+      {open && <div className={styles.xmenu }>
+            <a class={styles.siteHeaderLink} href="/get-started">Search used car prices</a>
+            <a class={styles.siteHeaderLink} href="/">What's my car worth?</a>
         </div>}
       </button>
     </div>

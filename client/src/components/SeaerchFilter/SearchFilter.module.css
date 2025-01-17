@@ -1,0 +1,27 @@
+.ngStarInserted{
+  color: var(--color-emphasis-high-dark);
+  font-size: 64px;
+  font-weight: 600;
+  line-height: 72px;
+  letter-spacing: -1.5px;
+  text-align: center;
+}
+
+.filterWraper{
+  margin-top: 2rem;
+}
+.newFiltersWraper{
+  background: rgba(241, 241, 241, .87);
+  padding: 1.5rem;
+  border-radius:1.5rem;
+}
+.filterActions{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 1.25rem 0 0;
+}
+.filtersButtons{
+  display: flex;
+  gap: 10px;
+}

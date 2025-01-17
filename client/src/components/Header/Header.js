@@ -9,7 +9,7 @@ const Header = ()=>{
   <header className={styles.header}>
     <Wraper className={styles.siteHeaderWrapper}>
       <div className={styles.siteHeaderLeftArea}> 
-        <a  href="/" class={styles.siteHeaderLogo}>
+        <a  href="/" className={styles.siteHeaderLogo}>
           <img className={styles.img} width="232" src="/images/header_logo.webp" alt="Prices People Pay Logo" title="Go to home" />
         </a>
       </div>
