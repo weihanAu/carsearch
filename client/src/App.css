@@ -1,0 +1,47 @@
+body{
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+  background: var(--color-dark-bg);
+  color: var(--color-core-text);
+  font-size: 16px;
+  font-family: Work Sans, system-ui, -apple-system, sans-serif;
+  font-weight: 400;
+  line-height: 1.2;
+  height: 100%;
+  counter-reset: listcount;
+}
+
+:root {
+  font-size: 16px;
+  --color-core-bg: #ffffff;
+  --color-dark-bg: #051C2C;
+  --color-core-text: #212121;
+  --color-primary: #004c93;
+  --color-emphasis-low-light: rgba(0, 0, 0, .38);
+  --color-emphasis-high-light: rgba(0, 0, 0, .87);
+  --color-emphasis-medium-light: rgba(0, 0, 0, .6);
+  --color-emphasis-high-dark: rgba(255, 255, 255, .87);
+  --color-emphasis-low-dark: rgba(255, 255, 255, .38);
+  --color-emphasis-medium-dark: rgba(255, 255, 255, .6);
+  --color-error: #ED2836;
+  --color-success: #13AD2A;
+  --color-warning: #F7B631;
+  --color-emphasis-gray: #F5F5F5;
+  --color-purple: #673AB7;
+  --color-light-purple: #9575CD;
+  --color-blue: #00A1CB;
+}
+
+:root {
+  --bs-breakpoint-xs: 0;
+  --bs-breakpoint-sm: 576px;
+  --bs-breakpoint-md: 768px;
+  --bs-breakpoint-lg: 992px;
+  --bs-breakpoint-xl: 1200px;
+  --bs-breakpoint-xxl: 1400px;
+}
+
+
+
+

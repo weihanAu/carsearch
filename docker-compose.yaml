@@ -1,0 +1,30 @@
+version: '3.8'
+
+services:
+  # React fron-end
+  client:
+    build: ./client
+    ports:
+      - "3000:3000"
+    volumes:
+      - ./client:/app
+    environment:
+       CHOKIDAR_USEPOLLING: "true" 
+       WATCHPACK_POLLING: "true" 
+    stdin_open: "true"
+    tty: "true"
+    depends_on:
+      - server
+
+  # Node.js back-end
+  server:
+    build: ./server
+    ports:
+      - "5000:5000"
+    volumes:
+      - ./server:/app
+    stdin_open: "true"
+    tty: "true"
+    environment:
+       CHOKIDAR_USEPOLLING: "true" 
+       WATCHPACK_POLLING: "true"

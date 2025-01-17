@@ -1,0 +1,9 @@
+.wraper{
+  margin-inline: auto;
+  width: 100%;
+  max-width: 1008px;
+  margin: 0 auto;
+  position: relative;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
