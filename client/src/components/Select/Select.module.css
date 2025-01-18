@@ -1,0 +1,40 @@
+.wraper{
+  display: flex;
+  justify-content: center;
+}
+.select{
+  width: 100%;
+  border-radius: 0.5rem;
+  padding: 0.25rem;
+}
+
+@media (max-width:575px) {
+  .wraper {
+    flex: 0 0 auto;
+    width: calc( 100% - 0.25rem)
+  }
+  .select {
+    width: 100%;
+  }
+}
+
+@media (min-width:576px) {
+  .wraper {
+    flex: 0 0 auto;
+    width: calc(50% - 0.25rem)
+  }
+}
+
+@media (min-width:768px) {
+  .wraper {
+    flex: 0 0 auto;
+    width: calc(33.33333333% - 0.25rem );
+  }
+}
+
+@media (min-width:992px) {
+  .wraper {
+    flex: 0 0 auto;
+    width: calc(25% - 0.25rem);
+  }
+}

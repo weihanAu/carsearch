@@ -1,0 +1,140 @@
+.carResultListing{
+  background: var(--color-core-bg);
+  padding: 64px 0;
+}
+.container{
+  padding: 0 32px;
+  margin: 0 auto;
+}
+
+.tableContainer {
+  margin: 20px;
+  overflow-x: auto;
+}
+
+.vehicleTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  background-color: white;
+  text-align: left;
+}
+
+.vehicleTable thead {
+  background-color: #f1f1f1;
+}
+
+.vehicleTable th,
+.vehicleTable td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+}
+
+.vehicleTable th {
+  font-weight: bold;
+  color: #333;
+}
+
+.vehicleTable tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.vehicleTable tr:hover {
+  background-color: #f1f1f1;
+}
+
+.revealButton {
+  background-color: #00aaff;
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.loadmore{
+  background: var(--color-blue);
+  color: var(--color-emphasis-high-dark);
+  border: none;
+  font-size: 1.125rem;
+  padding: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  border-radius: 1rem;
+}
+.loadmore:hover{
+  cursor: pointer;
+}
+.loadmoreWraper{
+  width: 100%;
+  text-align: center;
+  margin-top: 1rem;
+}
+/* Responsive styles */
+@media (max-width: 768px) {
+
+  .vehicleTable th,
+  .vehicleTable td {
+    font-size: 0.9rem;
+    /* Reduce font size */
+    padding: 8px;
+    /* Reduce padding */
+  }
+
+  .revealTutton {
+    font-size: 0.8rem;
+    /* Adjust button font size */
+    padding: 6px 10px;
+    /* Adjust button padding */
+  }
+}
+
+@media (max-width: 650px) {
+
+  .vehicleTable {
+    font-size: 0.8rem;
+    /* Reduce overall font size */
+  }
+  .vehicleTable thead{
+    display: none;
+  }
+  .vehicleTable th,
+  .vehicleTable td {
+    display: block;
+    /* Stack table rows vertically */
+    width: 100%;
+    /* Ensure rows span full width */
+    text-align: right;
+    /* Align content to the right for readability */
+    padding: 10px 5px;
+    /* Add more padding for spacing */
+    border: none;
+    /* Remove borders for cleaner mobile view */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .vehicleTable th {
+    text-align: left;
+    /* Keep header labels aligned left */
+    font-weight: bold;
+  }
+
+  .vehicleTable tbody tr {
+    margin-bottom: 10px;
+    /* Add spacing between stacked rows */
+    border-bottom: 1px solid #ddd;
+    /* Add bottom border between rows */
+  }
+
+  .vehicleTable td::before {
+    content: attr(data-label);
+    /* Add labels to each cell using data-label attribute */
+    font-weight: bold;
+    display: inline-block;
+    margin-right: 10px;
+    color: #555;
+  }
+}

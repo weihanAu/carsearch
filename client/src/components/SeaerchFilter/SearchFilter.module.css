@@ -20,8 +20,18 @@
   align-items: center;
   justify-content: space-between;
   margin: 1.25rem 0 0;
+  margin-right: 0.25rem;
 }
 .filtersButtons{
   display: flex;
   gap: 10px;
+}
+.filtersWraper{
+  display: flex;
+  flex-wrap: wrap;
+  gap:0.25rem;
+  margin-top: calc(-1* var(--bs-gutter-y));
+  margin-right: calc(-.5* var(--bs-gutter-x));
+  margin-left: calc(-.5* var(--bs-gutter-x));
+  justify-content: start;
 }
