@@ -14,11 +14,21 @@ const SearchResults =forwardRef(({formState,options},ref)=>{
   const argumentYear =formState.year;
   const argumentGear =formState.transmission;
 
-  console.log(argumentYear,argumentModel,argumentMake,argumentGear)
-
   useImperativeHandle(ref, () => ({
-    sayHello() {
-      alert("Hello from Child!");
+    async fetchCarsOnFilters(){
+      const uri = `http://localhost:5000/api/cars?page=1&limit=50${argumentMake?`&make=${argumentMake}`:''}${argumentModel?`&model=${argumentModel}`:''}${argumentYear?`&year=${argumentYear}`:''}${argumentGear?`&transmission=${argumentGear}`:''}`;
+      try{
+        const response = await fetchCars(uri);
+        const page = response.page;
+        const totalPages = response.totalPages;
+        console.log(page,totalPages);
+        setPage(page);
+        setTotalPage(totalPages);
+        const cars = response.cars;
+        setResults(cars);
+      }catch(e){
+        console.log(e);
+      }
     },
   }));
 
@@ -60,24 +70,27 @@ const SearchResults =forwardRef(({formState,options},ref)=>{
             </tr>
           </thead>
           <tbody>       
-            { results.map((car)=>{
-              if(!car._id){
-                return null;
-              }
-              return (
-                <SingleCar key={car._id} car={car} buttonClassName={styles.revealButton}/>
-              )
-              })
+            {results.length==0?
+              <tr>
+              </tr>:results.map((car)=>{
+                  if(!car._id){
+                    return null;
+                  }
+                  return (
+                    <SingleCar key={car._id} car={car} buttonClassName={styles.revealButton}/>
+                  )
+                })
             }      
           </tbody>
         </table>
-        {page==totalPage?
+         {results.length==0?<div style={{textAlign:'center'}}>no datas found.</div>:''}
+        {page==totalPage||totalPage==0?
           '':
           <div className={styles.loadmoreWraper}>
             <button 
               className={styles.loadmore} 
               onClick={handleLoadMore}>
-              load more
+              load more.
             </button>
           </div>}
       </div>

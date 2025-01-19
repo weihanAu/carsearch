@@ -9,6 +9,7 @@ router.get('/', async (req, res) => {
     if (req.query.make) filters.make = req.query.make;
     if (req.query.model) filters.model = req.query.model;
     if (req.query.year) filters.year = parseInt(req.query.year);
+    if (req.query.transmission) filters.transmission = req.query.transmission;
 
     // pagination
     const page = parseInt(req.query.page) || 1; 

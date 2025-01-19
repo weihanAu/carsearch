@@ -78,3 +78,21 @@ body {
 .toggleButton:not(.active):hover {
   background: rgba(255, 255, 255, 0.1);
 }
+
+@media(max-width:950px){
+  .vehicleStats{
+    gap:0.6rem
+  }
+}
+
+@media(max-width:900px) {
+  .vehicleStatsSort{
+    flex-direction: column;
+  }
+}
+
+@media(max-width:576px){
+  .sortContainer {
+      flex-direction: column;
+    }
+}

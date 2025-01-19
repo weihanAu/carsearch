@@ -35,3 +35,9 @@
   margin-left: calc(-.5* var(--bs-gutter-x));
   justify-content: start;
 }
+
+@media(max-width:576px){
+  .ngStarInserted{
+    font-size: 2rem;
+  }
+}

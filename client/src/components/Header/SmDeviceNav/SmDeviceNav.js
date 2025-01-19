@@ -15,8 +15,8 @@ const SmDeviceNav =()=>{
           <div className={styles.burgerLine}></div>
         </div>
       {open && <div className={styles.xmenu }>
-            <a class={styles.siteHeaderLink} href="/get-started">Search used car prices</a>
-            <a class={styles.siteHeaderLink} href="/">What's my car worth?</a>
+            <a className={styles.siteHeaderLink} href="/get-started">Search used car prices</a>
+            <a className={styles.siteHeaderLink} href="/">What's my car worth?</a>
         </div>}
       </button>
     </div>

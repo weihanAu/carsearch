@@ -25,7 +25,7 @@ const SearchFilter =()=>{
 
    const triggerChildFunction = () => {
      if (childRef.current) {
-      childRef.current.sayHello(); // Call the child's function
+      childRef.current.fetchCarsOnFilters(); // Call the child's function
      }
    };
 
@@ -91,7 +91,12 @@ const SearchFilter =()=>{
             <a></a>
             <div className={styles.filtersButtons}>
               <Button bgBlack text="Apply" onClick={triggerChildFunction}/>
-              <Button text="Clear" />
+              <Button text="Clear" onClick={()=>{
+                  setFormState({make: "", model: "", year: "", transmission: ""});
+                  setOptions({make: ['Toyota','audi','BMW'],model: [],year: [],transmission: ['auto','manual'],});  
+                }
+              }
+                />
             </div>
           </div>
           </div>

@@ -12,6 +12,7 @@ app.use(cors());
 app.use(bodyParser.json());
 
 // MongoDB Connection
+// use environment variables for security.
 const uri = "mongodb+srv://weihan:bFfWc7WmDhebj4c@cluster0.4crkf.mongodb.net/car_database?retryWrites=true&w=majority";
 mongoose.connect(uri, {
   useNewUrlParser: true,
