@@ -63,13 +63,12 @@ const SearchFilter =()=>{
    }
 
   return (
-    <>
+    <main className={`site-body ${styles.siteBody}`}>
       <Wraper>
         <h1 className={styles.ngStarInserted}>Used car sales</h1>
         <div className={styles.filterWraper}>
           <div className={styles.newFiltersWraper}>
             <div className={styles.filtersWraper}>
-
               <Select name="make" options={options.make} 
                 handleChange={(i)=>{
                   //narrow down filters based on make
@@ -104,7 +103,7 @@ const SearchFilter =()=>{
         <InfoBar />
       </Wraper>
       <SearchResults formState={formState} options={options} ref={childRef}/>
-    </>
+    </main>
   )
 }
 
